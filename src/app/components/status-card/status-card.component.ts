@@ -1,0 +1,1 @@
+import {Component,Input} from "@angular/core";@Component({selector:"app-status-card",standalone:true,template:"<article class=status-card><small>{{label}}</small><strong>{{value}}</strong><p>{{detail}}</p></article>"})export class StatusCardComponent{@Input()label="";@Input()value="";@Input()detail="";}
