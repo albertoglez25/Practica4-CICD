@@ -13,7 +13,7 @@ import { PipelineComponent } from './components/pipeline/pipeline.component';
       <section class="hero">
         <small>AUTOMATIZACIÓN DE DESARROLLO</small>
         <h1>De código a <em>producción.</em></h1>
-        <p>Una pipeline sencilla para entender la integración y el despliegue continuos.</p>
+        <p>Una pipeline sencilla para ver cómo los cambios llegan de forma automática a producción.</p>
         <div class="graphic"><div class="orbit"></div><strong>CI → CD</strong></div>
       </section>
       <section class="cards">
