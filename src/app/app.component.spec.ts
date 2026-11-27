@@ -1,1 +1,3 @@
 import {TestBed}from "@angular/core/testing";import {AppComponent}from "./app.component";describe("AppComponent",()=>{beforeEach(async()=>TestBed.configureTestingModule({imports:[AppComponent]}).compileComponents());it("shows dashboard and pipeline",()=>{const f=TestBed.createComponent(AppComponent);f.detectChanges();expect(f.nativeElement.textContent).toContain("De código a");expect(f.nativeElement.querySelector("app-pipeline")).toBeTruthy();});});
+// Prueba temporal para demostrar que CI detecta un fallo.
+describe('Demostración de CI', () => { it('falla de forma intencionada', () => { expect('CI').toBe('ERROR INTENCIONADO'); }); });
