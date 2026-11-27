@@ -14,13 +14,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Node 22 con cache npm
+      - name: Instalar Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Crear lockfile si falta
+        run: npm install --package-lock-only --ignore-scripts
+      - name: Configurar cache npm
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - name: Crear lockfile si falta
-        run: npm install --package-lock-only --ignore-scripts
+          cache-dependency-path: package-lock.json
       - name: Instalar dependencias
         run: npm ci
       - name: Ejecutar tests con cobertura
